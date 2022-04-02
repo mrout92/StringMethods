@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class StringMethod {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String S1 = sc.nextLine();
+        System.out.println(S1);                      //To print the input string.
+        System.out.println(S1.length());             // To Print the length of the string.
+        System.out.println(S1.toLowerCase());        // To convert all uppercase characters to lowercase.
+        System.out.println(S1.toUpperCase());        //To convert all lowercase characters to uppercase.
+        String s2= "   Manas   ";                    //New String with Spaces at Start & end.
+        System.out.println(s2.trim());               //To trim all leading & trailing spaces.
+        System.out.println(S1.substring(2));         //To print a string from given string S1 from index 2.
+        System.out.println(S1.substring(2,6));       //To print string from range of index(2 included & 6 Excluded.
+        System.out.println(S1.replace('n','p'));     //To replace n char with new char p.
+        System.out.println(S1.startsWith("Man"));    //To check the starting char of String.
+        System.out.println(S1.endsWith("jan"));      //To check the ending chars of String.
+        System.out.println(S1.charAt(3));            //To print the character at index 4.
+        int position = 'j';
+        System.out.println(S1.indexOf(position));    //To print the index of the character in the string.
+        System.out.println(S1.indexOf("a",4));       //To print the index number of char post index >= 4.
+        System.out.println(S1.lastIndexOf("n"));     //To print the last index of char in the string.
+        System.out.println(S1.lastIndexOf("a",10));   //To print last index of char in string before index 10
+        System.out.println(s2.equals("   Manas   "));   //To check input string is same as "Manasranjan" or not
+        System.out.println(S1.equalsIgnoreCase("manasranjan"));  //To check input & given string by ignoring upper & lower case chars
+    }
+}
