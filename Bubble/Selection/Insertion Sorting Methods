@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+class Sortings {
+    //Code for Bubble Sort
+    public static void printArray(int arr[]) {
+        for(int i=0; i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void  main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int N= sc.nextInt();
+        int arr[]= new int[N];
+        for(int i=0;i<N;i++) {
+            arr[i] = sc.nextInt();
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        //Bubble Sort
+//        for(int j=0;j<N;j++){
+//            for(int k=0;k<N-j-1;k++){
+//                if(arr[k]>arr[k+1]){
+//                    //Swap
+//                    int temp=arr[k];
+//                    arr[k]=arr[k+1];
+//                    arr[k+1]=temp;
+//                }
+//            }
+//        }
+        //Selection Sort in descending order
+//        for(int i=0;i<N-1;i++){
+//            int largest=i;
+//            for(int j=i+1;j<N;j++){
+//                if(arr[j]>arr[largest]){
+//                    largest=j;
+//                }
+//            }
+//            //swap
+//            int temp=arr[largest];
+//            arr[largest]=arr[i];
+//            arr[i]=temp;
+//        }
+        //Insertion Sort
+        for(int i =1;i<arr.length;i++){
+            int current=arr[i];
+            int j=i-1;
+            while(j>=0 && arr[j] > current){
+                arr[j+1]=arr[j];
+                j--;
+            }
+            arr[j+1]=current;
+        }
+        printArray(arr);
+    }
+}
